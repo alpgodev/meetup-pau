@@ -1,19 +1,20 @@
 # meetup-pau
-Meetup ML Pau - Optimisation distribuée
+
+Meetup Machine Learning Pau (20 décembre 2017) - Optimisation distribuée
 
 ## Résumé 
 
-Quand on utilise des algorithmes de Machine Learning on doit résoudre un problème d’optimisation pour estimer les paramètres du modèle. Ces méthodes d’optimisation sont souvent des boîtes noires pour les utilisateurs et leur fonctionnement reste invisible. L’objectif de ce meetup est de démystifier ces méthodes, en particulier lorsqu’on a énormément de données ou/et beaucoup de paramètres (Big Data). 
+Quand on utilise des algorithmes de Machine Learning on doit résoudre un problème d’optimisation pour estimer les paramètres du modèle. Ces méthodes d’optimisation sont souvent des boîtes noires pour les utilisateurs et leur fonctionnement reste invisible. L’objectif de ce meetup est de démystifier ces méthodes, en particulier lorsqu’on a énormément de données ou/et beaucoup de paramètres (Big Data & Big Model). 
 
-Une première partie présentera comment on peut résoudre un problème d’optimisation en grande taille en utilisant la puissance de plusieurs machines (cluster). Ensuite, comme ce meetup se place sous le signe de l’action nous développerons ensemble (en Python) une méthode d’optimisation distribuée à travers le framework Spark sur un cas d’application pratique.
+Une première partie présentera comment on peut résoudre un problème d’optimisation en très grande taille en utilisant la puissance de nombreuses machines (cluster). Ensuite, comme ce meetup se place sous le signe de l’action nous développerons ensemble (en Python) une méthode d’optimisation distribuée à travers le framework Spark sur un cas d’application pratique.
 
 Références : 
-Spark - http://spark.apache.org
-Docker - http://www.docker.com
+1. Spark - http://spark.apache.org
+2. Docker - http://www.docker.com
 
-## Quelques préparatifs pour la partie pratique du Meetup du 20 décembre 2017 “
+## Quelques préparatifs pour la partie pratique du Meetup
 
-Lors de la partie pratique nous utilisons le framework Spark en mode local (c’est-à-dire avec un noeud) sur un jeu de données de petite taille. Cependant, le code (Python) développé lors de la séance pourra être testé avec un gros jeu de données sur un cluster Spark - i.e. avec un service cloud dédié (AWS, Microsoft Azure, Google Cloud, IBM CC Labs, …) ou un cluster privé.
+Pour la partie pratique nous utilisons le framework Spark en mode local (c’est-à-dire avec un noeud) sur un jeu de données de petite taille. Cependant, le code (Python) développé lors de la séance pourra être testé avec un gros jeu de données sur un cluster Spark - i.e. avec un service cloud dédié (AWS, Microsoft Azure, Google Cloud, IBM CC Labs, …) ou un cluster privé.
 
 Pour cette partie pratique nous utiliserons une image Docker qui contient les outils et librairies nécessaires (Python, Notebook Jupyter, Spark …). 
 
@@ -29,6 +30,7 @@ Premièrement, rendez-vous sur le site officiel de docker pour télécharger l'o
 Lorsque l’installation est terminée, vérifiez votre installation en lançant la commande (dans un Terminal): docker run hello-world
 Si vous obtenez le message suivant c’est que l’installation est réussie et que Docker peut charger et exécuter des images.
 
+<p style='color:red'>
 Hello from Docker!
 This message shows that your installation appears to be working correctly.
 
@@ -48,21 +50,15 @@ Share images, automate workflows, and more with a free Docker ID:
 
 For more examples and ideas, visit:
  https://docs.docker.com/engine/userguide/
-
-2. Téléchargement des données et du TP (notebooks Jupyter)
-
-Rendez-vous à cette adresse pour récupérer les données et les notebooks: 
-
-Sur votre machine créer un répertoire notebooks
+</p>
 
 2. Installation de l’image 
 
 À présent nous allons charger et lancer l’image qui sera utilisée lors des travaux pratiques.
 
-docker run -it --rm -p 8888:8888 -p 4040:4040 -v $(pwd)/notebooks:/home/jovyan/work jupyter/all-spark-notebook:latest
+docker run -it --rm -p 8888:8888 -p 4040:4040 -v $(pwd)/:/home/jovyan/work jupyter/all-spark-notebook:latest
 
 Note - La première fois que vous utiliserez cette commande, l'image sera chargée, ce qui nécessite un certain temps de téléchargement (environ 4Go).
 
 3. Ouvrir votre navigateur avec le lien : http://localhost:8888/
 
-4. 
