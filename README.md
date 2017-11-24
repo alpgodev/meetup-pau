@@ -9,11 +9,17 @@ Quand on utilise des algorithmes de Machine Learning on doit résoudre un probl�
 Une première partie présentera comment on peut résoudre un problème d’optimisation en très grande taille en utilisant la puissance de nombreuses machines (_cluster_). Ensuite, comme ce meetup se place sous le signe de l’action nous développerons ensemble (en Python) une méthode d’optimisation distribuée à travers le _framework_ **Spark** sur un cas d’application pratique.
 
 Quelques références :
+
 [1] Spark - http://spark.apache.org
+
 [2] Docker - http://www.docker.com
+
 [3] [Algorithm Design: Parallel and Sequential](http://www.parallel-algorithms-book.com)
+
 [4] [Introduction to Algorithms by Cormen, Leiserson, Rivest, Stein](https://mitpress.mit.edu/sites/default/files/titles/sample/0262533057chap27.pdf)
+
 [5] [Convex Optimization by Boyd and Vandenberghe](http://web.stanford.edu/~boyd/cvxbook/)
+
 [6] Learning Spark by Holden Karau, Andy Konwinski, Patrick Wendell, Matei Zaharia
 
 ## Quelques préparatifs pour la partie pratique du Meetup
@@ -27,6 +33,7 @@ Docker est un gestionnaire d’images qui permet de virtualiser une machine. Il 
 1 . installation de docker
 
 Premièrement, rendez-vous sur le site officiel de docker pour télécharger l'outil d'installation :
+
 	•	Mac : http://store.docker.com/editions/community/docker-ce-desktop-mac
 	•	Windows : http://store.docker.com/editions/community/docker-ce-desktop-windows
 	•	Linux : http://www.docker.com (Get Docker)
@@ -64,7 +71,7 @@ For more examples and ideas, visit:
 
 ```docker run -it --rm -p 8888:8888 -p 4040:4040 -v $(pwd)/:/home/jovyan/work jupyter/all-spark-notebook:latest```
 
-Cette commande démarre un conteneur dans lequel le serveur _Jupyter Notebook_ est accessible sur le port 8888 (http://localhost:8888/) avec un jeton d'authentification généré de manière aléatoire.
+Cette commande démarre un conteneur dans lequel le serveur _Jupyter Notebook_ est accessible sur le port 8888 (http://localhost:8888/?token=) avec un jeton d'authentification généré de manière aléatoire.
 
 L'option `-v $(pwd)/:/home/jovyan/work` monte le répertoire courant (où sont les données et les _notebooks_) de l'ordinateur hôte en tant que dossier dans le conteneur (répertoire `/home/jovyan/work`). Utile lorsque vous souhaitez conserver vos _notebooks_ même après la destruction du conteneur.
 
