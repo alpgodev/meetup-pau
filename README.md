@@ -1,4 +1,15 @@
-# meetup-pau
+<center><h1>meetup-pau</h1></center>
+
+<center>
+<a href="https://www.meetup.com/fr-FR/Meetup-Machine-Learning-Pau/" ><img src="img/meetup_logo.png" style="float:left; max-width: 100px; display: inline" alt="Meetup"/></a>
+<a href="https://www.meetup.com/fr-FR/Meetup-Machine-Learning-Pau/" ><img src="img/meetup_ML_pau.png" style="float:center; max-width: 250px; display: inline"  alt="Meetup Machine Learning Pau"/></a>
+<a href="http://www.helioparc.com" ><img src="img/helioparc_logo.svg" style="float:right; max-width: 200px; display: inline" alt="Technopole Héloparc"/> </a>
+</center>
+<br>
+<hr>
+<center><h1>Optimisation distribuée avec Apache Spark</h1></center>
+<hr>
+
 
 Meetup Machine Learning Pau (20 décembre 2017) - Optimisation distribuée
 
@@ -85,6 +96,6 @@ Si vous souhaitez désactiver les mécanismes d'authentification tapez la comman
 
 ```docker run -it --rm -p 8888:8888 -p 4040:4040 -v $(pwd)/:/home/jovyan/work jupyter/all-spark-notebook:latest start-notebook.sh --NotebookApp.token=''```
 
-4. **Utilisation des Notebooks Jupyter** - Ouvrez votre navigateur sur [http://localhost:8888/](http://localhost:8888/) pour ouvrir un _Notebook Jupyter_, vous devriez alors voir les données et les _notebooks_ téléchargés dans le répertoire `work/`, et être capable de les modifier et d'éxécuter le code à l'intérieur. Pour finaliser votre installation ouvrez le _notebook_ `Lab0_Meetup_Pau.ipynb` et suivez les instructions.
+4. **Utilisation des Notebooks Jupyter** - Ouvrez votre navigateur sur [http://localhost:8888/](http://localhost:8888/), vous devriez alors voir les données et les _notebooks_ téléchargés dans le répertoire `work/`, et être capable de les modifier et d'éxécuter le code à l'intérieur (vous êtes sur un serveur Jupyter qui tourne dans votre _container_ _Docker_ !). Pour finaliser votre installation ouvrez le _notebook_ `Lab0_Meetup_Pau.ipynb` et suivez les instructions.
 
 
