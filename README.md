@@ -24,25 +24,27 @@ Quelques références :
 
 ## Quelques préparatifs pour la partie pratique du Meetup
 
-Pour la partie pratique nous utilisons le framework Spark en mode local (c’est-à-dire avec un seul noeud de stockage/calcul) sur un jeu de données de petite taille. Cependant, le code (Python) développé lors de la séance pourra être testé avec un gros jeu de données sur un cluster Spark - _i.e._ avec un service cloud dédié (AWS, Microsoft Azure, Google Cloud, IBM CC Labs, …) ou un cluster privé.
+Pour la partie pratique nous utilisons le framework _Spark_ en mode local (c’est-à-dire avec un seul noeud de stockage/calcul) sur un jeu de données de petite taille. Cependant, le code (Python) développé lors de la séance pourra être testé avec un gros jeu de données sur un cluster _Spark_ - _i.e._ avec un service cloud dédié (AWS, Microsoft Azure, Google Cloud, IBM CC Labs, …) ou un cluster privé.
 
-Pour participer à cette partie pratique vous devez installer une image Docker qui contient les outils et librairies nécessaires (Python, Notebook Jupyter, Spark …).
+Pour participer à cette partie pratique vous devez installer une image _Docker_ qui contient les outils et librairies nécessaires (Python, Notebook Jupyter, Spark …).
 
-Docker est un gestionnaire d’images qui permet de virtualiser une machine. Il utilise les librairies de votre système pour allouer dynamiquement des ressources pour une instance de l’image, appelée _container_. Il reste plus léger qu’une machine virtuelle standard. Docker est disponible pour Windows, MacOS et Linux.
+_Docker_ est un gestionnaire d’images qui permet de virtualiser une machine. Il utilise les librairies de votre système pour allouer dynamiquement des ressources pour une instance de l’image, appelée _container_. Il reste plus léger qu’une machine virtuelle standard. _Docker_ est disponible pour Windows, MacOS et Linux.
 
 1 . **installation de docker**
 
-Premièrement, rendez-vous sur le site officiel de docker pour télécharger l'outil d'installation :
+Premièrement, rendez-vous sur le site officiel de _Docker_ pour télécharger l'outil d'installation pour votre système :
 
-	•	[Mac](http://store.docker.com/editions/community/docker-ce-desktop-mac)
-	•	[Windows](http://store.docker.com/editions/community/docker-ce-desktop-windows)
-	•	[Linux](http://www.docker.com)
+- [Mac OS X](http://store.docker.com/editions/community/docker-ce-desktop-mac)
+
+- [Windows](http://store.docker.com/editions/community/docker-ce-desktop-windows)
+
+- [Linux](http://www.docker.com)
 
 Lorsque l’installation est terminée, vérifiez votre installation en lançant la commande suivante (dans un _Terminal_) :
 
 ```docker run hello-world```
 
-Si vous obtenez le message suivant c’est que l’installation est réussie et que Docker peut charger et exécuter des images.
+Si vous obtenez le message suivant c’est que l’installation est réussie et que _Docker_ peut charger et exécuter des images.
 
 ```
 Hello from Docker!
