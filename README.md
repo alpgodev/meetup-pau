@@ -14,13 +14,13 @@ Quelques références :
 
 [2] Docker - http://www.docker.com
 
-[3] [Algorithm Design: Parallel and Sequential](http://www.parallel-algorithms-book.com)
+[3] [Algorithm Design: Parallel and Sequential](http://www.parallel-algorithms-book.com) by Umut A. Acar and Guy E. Blelloch.
 
-[4] [Introduction to Algorithms by Cormen, Leiserson, Rivest, Stein](https://mitpress.mit.edu/sites/default/files/titles/sample/0262533057chap27.pdf)
+[4] [Introduction to Algorithms](https://mitpress.mit.edu/sites/default/files/titles/sample/0262533057chap27.pdf) by Cormen, Leiserson, Rivest, Stein.
 
-[5] [Convex Optimization by Boyd and Vandenberghe](http://web.stanford.edu/~boyd/cvxbook/)
+[5] [Convex Optimization](http://web.stanford.edu/~boyd/cvxbook/) by Boyd and Vandenberghe.
 
-[6] Learning Spark by Holden Karau, Andy Konwinski, Patrick Wendell, Matei Zaharia
+[6] [Learning Spark](http://github.com/databricks/learning-spark) by Holden Karau, Andy Konwinski, Patrick Wendell, Matei Zaharia.
 
 ## Quelques préparatifs pour la partie pratique du Meetup
 
@@ -39,7 +39,9 @@ Premièrement, rendez-vous sur le site officiel de docker pour télécharger l'o
 	•	Linux : http://www.docker.com (Get Docker)
 
 Lorsque l’installation est terminée, vérifiez votre installation en lançant la commande suivante (dans un _Terminal_) :
+
 ```docker run hello-world```
+
 Si vous obtenez le message suivant c’est que l’installation est réussie et que Docker peut charger et exécuter des images.
 
 ```
@@ -63,23 +65,26 @@ Share images, automate workflows, and more with a free Docker ID:
 For more examples and ideas, visit:
  https://docs.docker.com/engine/userguide/
 ```
-2. Téléchargez (ou bien _cloner_) le projet _github_ qui contient les jeux de données et les _notebooks_.
+2. Téléchargez (ou bien _cloner_) le projet _github_ qui contient les jeux de données et les _notebooks_ (fichier avec l'extension `ipynb`).
 
 3. Installation de l’image Docker
 
-À présent nous allons charger et lancer l’image qui sera utilisée pour les travaux pratiques. Placez vous dans le répertoire _meetup-pau_ où se trouve les données et les _notebooks_ et tapez la commande suivante dans le _Terminal_ :
+À présent nous allons charger (il faut avoir internet !) et lancer l’image qui sera utilisée pour les travaux pratiques. Placez vous dans le répertoire _meetup-pau_ où se trouve les données et les _notebooks_ et tapez la commande suivante dans le _Terminal_ :
 
 ```docker run -it --rm -p 8888:8888 -p 4040:4040 -v $(pwd)/:/home/jovyan/work jupyter/all-spark-notebook:latest```
+
+Note - La première fois que vous utiliserez cette commande, l'image sera chargée, ce qui nécessite un certain temps de téléchargement (límage fait environ 5Go).
 
 Cette commande démarre un conteneur dans lequel le serveur _Jupyter Notebook_ est accessible sur le port 8888 (http://localhost:8888/?token=) avec un jeton d'authentification généré de manière aléatoire.
 
 L'option `-v $(pwd)/:/home/jovyan/work` monte le répertoire courant (où sont les données et les _notebooks_) de l'ordinateur hôte en tant que dossier dans le conteneur (répertoire `/home/jovyan/work`). Utile lorsque vous souhaitez conserver vos _notebooks_ même après la destruction du conteneur.
 
-Si vous souhaitez désactiver tous les mécanismes d'authentification tapez la commande suivante :
+Si vous souhaitez désactiver les mécanismes d'authentification tapez la commande suivante :
 
 ```docker run -it --rm -p 8888:8888 -p 4040:4040 -v $(pwd)/:/home/jovyan/work jupyter/all-spark-notebook:latest start-notebook.sh --NotebookApp.token=''```
 
-Note - La première fois que vous utiliserez cette commande, l'image sera chargée, ce qui nécessite un certain temps de téléchargement (environ 5Go).
-
 4. Ouvrez votre navigateur sur [http://localhost:8888/](http://localhost:8888/) pour ouvrir Jupyter, vous devriez voir les _notebooks_ téléchargés, et être capable de les modifier et d'éxécuter le code à l'intérieur.
+
+5. Ouvrez le _notebook_ `Lab0_Meetup_Pau.ipynb` et suivez les instructions.
+
 
