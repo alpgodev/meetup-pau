@@ -30,13 +30,13 @@ Pour participer à cette partie pratique vous devez installer une image Docker q
 
 Docker est un gestionnaire d’images qui permet de virtualiser une machine. Il utilise les librairies de votre système pour allouer dynamiquement des ressources pour une instance de l’image, appelée _container_. Il reste plus léger qu’une machine virtuelle standard. Docker est disponible pour Windows, MacOS et Linux.
 
-1 . installation de docker
+1 . **installation de docker**
 
 Premièrement, rendez-vous sur le site officiel de docker pour télécharger l'outil d'installation :
 
-	•	Mac : http://store.docker.com/editions/community/docker-ce-desktop-mac
-	•	Windows : http://store.docker.com/editions/community/docker-ce-desktop-windows
-	•	Linux : http://www.docker.com (Get Docker)
+	•	[Mac](http://store.docker.com/editions/community/docker-ce-desktop-mac)
+	•	[Windows](http://store.docker.com/editions/community/docker-ce-desktop-windows)
+	•	[Linux](http://www.docker.com)
 
 Lorsque l’installation est terminée, vérifiez votre installation en lançant la commande suivante (dans un _Terminal_) :
 
@@ -65,9 +65,9 @@ Share images, automate workflows, and more with a free Docker ID:
 For more examples and ideas, visit:
  https://docs.docker.com/engine/userguide/
 ```
-2. Téléchargez (ou bien _cloner_) le projet _github_ qui contient les jeux de données et les _notebooks_ (fichier avec l'extension `ipynb`).
+2. **Téléchargez** (ou bien _cloner_) le projet _github_ qui contient le jeux de données et les _notebooks_ (fichiers avec l'extension `ipynb`).
 
-3. Installation de l’image Docker
+3. **Installation de l’image Docker**
 
 À présent nous allons charger (il faut avoir internet !) et lancer l’image qui sera utilisée pour les travaux pratiques. Placez vous dans le répertoire _meetup-pau_ où se trouve les données et les _notebooks_ et tapez la commande suivante dans le _Terminal_ :
 
@@ -83,8 +83,6 @@ Si vous souhaitez désactiver les mécanismes d'authentification tapez la comman
 
 ```docker run -it --rm -p 8888:8888 -p 4040:4040 -v $(pwd)/:/home/jovyan/work jupyter/all-spark-notebook:latest start-notebook.sh --NotebookApp.token=''```
 
-4. Ouvrez votre navigateur sur [http://localhost:8888/](http://localhost:8888/) pour ouvrir Jupyter, vous devriez voir les _notebooks_ téléchargés, et être capable de les modifier et d'éxécuter le code à l'intérieur.
-
-5. Ouvrez le _notebook_ `Lab0_Meetup_Pau.ipynb` et suivez les instructions.
+4. **Utilisation des Notebooks Jupyter** - Ouvrez votre navigateur sur [http://localhost:8888/](http://localhost:8888/) pour ouvrir un _Notebook Jupyter_, vous devriez alors voir les données et les _notebooks_ téléchargés dans le répertoire `work/`, et être capable de les modifier et d'éxécuter le code à l'intérieur. Pour finaliser votre installation ouvrez le _notebook_ `Lab0_Meetup_Pau.ipynb` et suivez les instructions.
 
 
