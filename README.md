@@ -1,17 +1,10 @@
 <center><h1>meetup-pau</h1></center>
 
 <center>
-<a href="https://www.meetup.com/fr-FR/Meetup-Machine-Learning-Pau/" ><img src="img/meetup_logo.png" style="float:left; max-width: 100px; display: inline" alt="Meetup"/></a>
 <a href="https://www.meetup.com/fr-FR/Meetup-Machine-Learning-Pau/" ><img src="img/meetup_ML_pau.png" style="float:center; max-width: 250px; display: inline"  alt="Meetup Machine Learning Pau"/></a>
-<a href="http://www.helioparc.com" ><img src="img/helioparc_logo.svg" style="float:right; max-width: 200px; display: inline" alt="Technopole Héloparc"/> </a>
 </center>
 <br>
-<hr>
-<center><h1>Optimisation distribuée avec Apache Spark</h1></center>
-<hr>
-
-
-Meetup Machine Learning Pau (20 décembre 2017) - Optimisation distribuée
+<center><h2>Optimisation distribuée avec Apache Spark  (20 décembre 2017) </h2></center>
 
 ## Résumé 
 
