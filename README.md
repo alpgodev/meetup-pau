@@ -7,7 +7,7 @@
 
 Quand on utilise des algorithmes de Machine Learning on doit résoudre un problème d’optimisation pour estimer les paramètres du modèle. Ces méthodes d’optimisation sont souvent des boîtes noires pour les utilisateurs et leur fonctionnement reste invisible. L’objectif de ce meetup est de démystifier ces méthodes, en particulier lorsqu’on a énormément de données ou/et beaucoup de paramètres (_Big Data_ & _Big Model_).
 
-Une première partie présentera comment on peut résoudre un problème d’optimisation en très grande taille en utilisant la puissance de nombreuses machines (_cluster_). Ensuite, comme ce meetup se place sous le signe de l’action nous développerons ensemble (en Python) une méthode d’optimisation distribuée à travers le _framework_ **Spark** sur un cas d’application pratique.
+Une première partie présentera comment on peut résoudre un problème d’optimisation en très grande taille en utilisant la puissance de nombreuses machines (_cluster_). Ensuite, nous développerons ensemble (en Python) une méthode d’optimisation distribuée à travers le _framework_ **Spark** sur un cas d’application pratique.
 
 Quelques références :
 
@@ -31,7 +31,7 @@ Pour participer à cette partie pratique vous devez installer une image _Docker_
 
 _Docker_ est un gestionnaire d’images qui permet de virtualiser une machine. Il utilise les librairies de votre système pour allouer dynamiquement des ressources pour une instance de l’image, appelée _container_. Il reste plus léger qu’une machine virtuelle standard. _Docker_ est disponible pour Windows, MacOS et Linux.
 
-1 . **installation de docker**
+1 . **Installation de docker**
 
 Premièrement, rendez-vous sur le site officiel de _Docker_ pour télécharger l'outil d'installation pour votre système :
 
@@ -68,15 +68,17 @@ Share images, automate workflows, and more with a free Docker ID:
 For more examples and ideas, visit:
  https://docs.docker.com/engine/userguide/
 ```
-2. **Téléchargez** (ou bien _cloner_) le projet _github_ qui contient le jeux de données et les _notebooks_ (fichiers avec l'extension `ipynb`).
+2. **Téléchargement du Lab**
+
+Télécharger (ou bien _cloner_) le projet _github_ qui contient le jeux de données et les _notebooks_ (fichiers avec l'extension `.ipynb`).
 
 3. **Installation de l’image Docker**
 
-À présent nous allons charger (il faut avoir internet !) et lancer l’image qui sera utilisée pour les travaux pratiques. Placez vous dans le répertoire _meetup-pau_ où se trouve les données et les _notebooks_ et tapez la commande suivante dans le _Terminal_ :
+À présent nous allons charger (il faut avoir internet !) et lancer l’image qui sera utilisée pour les travaux pratiques. Placez vous dans le répertoire _meetup-pau/_ où se trouve les données et les _notebooks_ et tapez la commande suivante dans le _Terminal_ :
 
 ```docker run -it --rm -p 8888:8888 -p 4040:4040 -v $(pwd)/:/home/jovyan/work jupyter/all-spark-notebook:latest```
 
-Note - La première fois que vous utiliserez cette commande, l'image sera chargée, ce qui nécessite un certain temps de téléchargement (límage fait environ 5Go).
+Note - La première fois que vous utiliserez cette commande, l'image sera chargée, ce qui nécessite un certain temps de téléchargement (l'image fait environ 5Go).
 
 Cette commande démarre un conteneur dans lequel le serveur _Jupyter Notebook_ est accessible sur le port 8888 (http://localhost:8888/?token=) avec un jeton d'authentification généré de manière aléatoire.
 
